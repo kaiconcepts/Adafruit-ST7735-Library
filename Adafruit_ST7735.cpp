@@ -199,6 +199,8 @@ void Adafruit_ST7735::initR(uint8_t options) {
   if ((options == INITR_BLACKTAB) || (options == INITR_MINI160x80)) {
     writecommand(ST77XX_MADCTL);
     writedata(0xC0);
+	_colstart = 2;
+    _rowstart = 1;
   }
 
   tabcolor = options;
